@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: bsousa-d <bsousa-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 17:38:58 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/12/23 00:03:32 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/12/23 00:29:31 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 #define SO_LONG_H
 
-#include <OpenGL/gl.h>
-#include <OpenGL/glu.h>
-# include "../mlx/mlx.h"
+# include "../minilibx-linux/mlx.h"
+# include "../minilibx-linux/mlx_int.h"
 # include "../libft/includes/libft.h"
 # include <fcntl.h>
 
@@ -39,6 +38,14 @@
 # define ESC 65307
 # define WINDOW_NAME "./so_long"
 # define SPRITE_SIZE 32
+
+# define KEY_RELEASE	3
+# define DESTROY_NOTIFY	17
+# define EXPOSE		12
+
+# define KEY_RELEASE_MASK	2
+# define NO_EVENT_MASK		0
+# define EXPOSURE_MASK		32768
 
 enum e_direction
 {
