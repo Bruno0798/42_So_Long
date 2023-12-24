@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bsousa-d <bsousa-d@student.42.fr>          +#+  +:+       +#+         #
+#    By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/01 17:56:01 by bsousa-d          #+#    #+#              #
-#    Updated: 2023/12/23 00:25:24 by bsousa-d         ###   ########.fr        #
+#    Updated: 2023/12/24 19:59:36 by bsousa-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,9 +43,10 @@ AR      = ar -rcs
 #· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·#
 
 CFLAGS  = -Wall -Wextra -Werror -Ilibft/includes -I/usr/X11/include -I/opt/X11/include
-LDFLAGS = -lmlx -lXext -lX11 -Imlx_linux
-#LDFLAGS = -Llibft -lft -Lmlx -lmlx -Ilmlx -lXext -lX11 -lm -framework OpenGL -framework AppKit
-X11_FLAGS = -L/usr/X11/lib
+#LDFLAGS = -lmlx -lXext -lX11 -Imlx_linux
+LDFLAGS = -Llibft -lft -Lmlx -lmlx -Ilmlx -lXext -lX11 -lm -framework OpenGL -framework AppKit
+X11_FLAGS = -L/usr/X11/lib -Lmlx -L/usr/lib
+
 
 #· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·#
 #·                                                                                           ·#
@@ -79,9 +80,9 @@ all: $(NAME)
 
 
 $(NAME): $(OBJ) $(LIBFT_LIB)
-	@make -C minilibx-linux > /dev/null 2>&1
+	@make -C mlx > /dev/null 2>&1
 	@echo "[$(CYAN)Linking$(RESET)] $(GREEN)$(NAME)$(RESET)"
-	@$(CC) -L minilibx-linux -lbsd $(CFLAGS) $^ -o $@ $(LDFLAGS) $(X11_FLAGS)
+	@$(CC) -L mlx $(CFLAGS) $^ -o $@ $(LDFLAGS) $(X11_FLAGS)
 	@echo "$(GREEN)Done.$(RESET)"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)

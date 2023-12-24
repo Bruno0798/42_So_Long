@@ -6,7 +6,7 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 23:55:05 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/12/22 23:55:40 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/12/24 20:00:05 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,9 @@ void	player_init(t_game	*game)
 		}
 		point.y++;
 	}
-	return ;
 }
 
 static void	render_player(t_game *game)
 {
-	mlx_put_image_to_window(game->mlx, game->window,
-		game->player.ptr, game->player.x, game->player.y);
+	mlx_put_image_to_window(game->mlx, game->window, game->player.ptr, game->player.x, game->player.y);
 }

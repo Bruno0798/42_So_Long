@@ -6,17 +6,14 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 17:38:58 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/12/23 01:14:24 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/12/24 20:01:35 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 #define SO_LONG_H
 
-# include <GL/gl.h>
-#include <GL/glu.h>
-# include "../minilibx-linux/mlx.h"
-# include "../minilibx-linux/mlx_int.h"
+# include "../mlx/mlx.h"
 # include "../libft/includes/libft.h"
 # include <fcntl.h>
 

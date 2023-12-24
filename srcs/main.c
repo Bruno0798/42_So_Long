@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 23:04:09 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/12/23 00:29:05 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/12/24 20:00:32 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,5 @@ static bool	is_ber_file(const char *argv)
 static void	init_hook(t_game *game, int event, \
 int mask, int (*f)())
 {
-	mlx_hook(
-		game->window,
-		event,
-		mask,
-		f,
-		game);
+	mlx_hook(game->window, event, mask, f, game);
 }

@@ -6,7 +6,7 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 23:52:56 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/12/23 00:09:43 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/12/24 20:00:45 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	init_map(t_game *game, char *path)
 	read_map(game, fd);
 	game->map.length = len_map_validation(game->map.map, game);
 	close(fd);
-	return ;
 }
 
 static void	read_map(t_game *game, int fd)
@@ -45,7 +44,6 @@ static void	read_map(t_game *game, int fd)
 	game->i = start_counter(temp, game);
 	game->map.map = ft_split(temp, '\n');
 	free(temp);
-	return ;
 }
 
 static t_counter	start_counter(char *string_map, t_game *game)
