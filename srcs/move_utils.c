@@ -6,7 +6,7 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 21:09:46 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/12/22 23:47:05 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2024/01/04 11:10:57 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int key_check(int keycode, t_game *game)
 {
+	printf("x: %d, y: %i\n", game->player.x / SPRITE_SIZE, game->player.y / SPRITE_SIZE);
 	game->player.mem = 0;
 	if (keycode == ESC)
 		endgame("", game, event_ending);

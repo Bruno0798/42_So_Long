@@ -6,7 +6,7 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 17:38:58 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/12/24 20:01:35 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2024/01/02 14:43:10 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,5 +141,7 @@ t_point	get_screen_size(t_game *game);
 bool	is_larger_than_window(t_game *game);
 int	red_cross(t_game *game);
 int	mini_maker(t_game *game);
+bool is_possible_to_collect_coins_and_access_exit(t_game *game);
+bool is_path_valid(int coins, char **map, int y, int x);
 
 #endif //SO_LONG_H

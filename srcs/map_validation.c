@@ -6,7 +6,7 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 23:51:02 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/12/22 23:52:38 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/12/26 15:30:39 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 bool	is_surrounded_by_trees(t_game *game, int y, int x)
 {
-	if ((game->map.map[game->map.height - 1][x] != '1') || \
-		(game->map.map[0][x] != '1') || (game->map.map[y] \
-		[game->map.length - 1] != '1') || (game->map.map[y][0] != '1'))
-	{
+	if ((game->map.map[game->map.height - 1][x] != '1') || (game->map.map[0][x] != '1') || (game->map.map[y][game->map.length - 1] != '1') || (game->map.map[y][0] != '1'))
 		return (false);
-	}
 	return (true);
 }
 
@@ -48,9 +44,7 @@ bool	is_double_line(char *string_map, int i)
 
 void	is_elements_number_valid(t_game *game, t_counter *cnt, char *temp)
 {
-	if (\
-	!(cnt->collectible > 0 && cnt->exit == 1 && \
-	cnt->start == 1 && cnt->empty > 0))
+	if (!(cnt->collectible > 0 && cnt->exit == 1 && cnt->start == 1 && cnt->empty > 0))
 	{
 		free(temp);
 		endgame("Invalid, file!", game, file_error);
